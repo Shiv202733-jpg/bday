@@ -1,0 +1,181 @@
+/* General Body Style */
+body {     
+    background: linear-gradient(to bottom right, #ff9a9e, #fad0c4);     
+    font-family: 'Poppins', cursive;     
+    text-align: center;     
+    overflow-x: hidden;     
+    position: relative; 
+}
+
+/* Main Container Style */
+.main-container {     
+    min-height: 100vh;     
+    display: flex;     
+    justify-content: center;     
+    align-items: center;     
+    flex-direction: column;     
+    padding: 20px; 
+}
+
+/* Birthday Heading Style */
+.birthday-heading {     
+    font-size: 3rem;     
+    color: #ffffff;     
+    text-shadow: 2px 2px 4px #ff6f61;     
+    animation: fadeIn 2s ease-in-out; 
+}
+
+/* Birthday Message Style */
+.birthday-message {     
+    font-size: 1.5rem;     
+    margin-top: 20px;     
+    color: #fff;     
+    animation: fadeIn 2s ease-in-out 1s; 
+}
+
+/* Party Popper Icon Style */
+.party-popper {     
+    position: absolute;     
+    top: 40%;     
+    left: 50%;     
+    transform: translate(-50%, -50%);     
+    width: 50px;     
+    height: 50px;     
+    background-image: url('https://instagram.fdel72-1.fna.fbcdn.net/v/t51.2885-19/363521443_1913409019030067_6077650384084950974_n.jpg?_nc_ht=instagram.fdel72-1.fna.fbcdn.net_nc_cat=111_nc_ohc=uh7AU12w1I0Q7kNvgEpeSdq_nc_gid=5190f440f40c43ed86ecb3e03bc9b9f2edm=ALGbJPMBAAAAccb=7-5oh=00_AYB5yRPY24fXY-_RmcywLiKAyReCI4uHaG3gikIkUwL9jwoe=6788A143_nc_sid=7d3ac5'); /* Corrected path to your image */     
+    background-size: cover;     
+    animation: popper-explode 1.5s ease-in-out;     
+    opacity: 1; 
+}
+
+/* Confetti Style */
+.confetti {     
+    position: absolute;     
+    width: 10px;     
+    height: 10px;     
+    background: #fff;     
+    border-radius: 50%;     
+    opacity: 0;     
+    animation: confetti-explode 1s ease-in-out; 
+}
+
+/* Confetti Variations */
+.confetti-1 { left: 20px; background: #ff6f61; animation-delay: 0.2s; } 
+.confetti-2 { left: -20px; background: #f5a623; animation-delay: 0.3s; } 
+.confetti-3 { left: 40px; background: #ffcccb; animation-delay: 0.4s; } 
+.confetti-4 { left: -40px; background: #fadc85; animation-delay: 0.5s; } 
+.confetti-5 { left: 0px; background: #a8d5e2; animation-delay: 0.6s; }
+
+/* Popper Explode Animation */
+@keyframes popper-explode {     
+    0% { transform: scale(0.5); opacity: 0; }     
+    50% { transform: scale(1.5); opacity: 1; }     
+    100% { transform: scale(2); opacity: 0; } 
+}
+
+/* Confetti Explode Animation */
+@keyframes confetti-explode {     
+    0% { transform: translate(0, 0); opacity: 1; }     
+    100% { transform: translate(calc(-100px + 200px * random()), -100px); opacity: 0; } 
+}
+
+/* Flower Falling Animation */
+@keyframes fall {     
+    0% { transform: translateY(-100vh) rotate(0deg); }     
+    100% { transform: translateY(100vh) rotate(360deg); } 
+}
+
+/* Flower Falling Style */
+.falling-flowers .flower {     
+    position: absolute;     
+    top: -10%;     
+    width: 40px;     
+    height: 40px;     
+    background-image: url('https://cdn-icons-png.flaticon.com/512/615/615669.png'); /* Flower Icon */     
+    background-size: cover;     
+    animation: fall 6s linear infinite;     
+    opacity: 0.8; 
+}
+
+/* Flower Variations */
+.flower-1 { left: 10%; animation-delay: 0s; } 
+.flower-2 { left: 30%; animation-delay: 1s; } 
+.flower-3 { left: 50%; animation-delay: 2s; } 
+.flower-4 { left: 70%; animation-delay: 3s; } 
+.flower-5 { left: 90%; animation-delay: 4s; }
+
+/* Balloon Floating Animation */
+@keyframes float-up {     
+    0% { transform: translateY(100vh) translateX(0) scale(1); }     
+    50% { transform: translateY(0) translateX(-10px) scale(1.1); }     
+    100% { transform: translateY(-150vh) translateX(10px) scale(1); } 
+}
+
+/* Balloon Floating Style */
+.floating-balloons .balloon {     
+    position: absolute;     
+    bottom: -10%;     
+    width: 60px;     
+    height: 80px;     
+    background-color: #ff6f61;     
+    border-radius: 50%;     
+    animation: float-up 8s ease-in-out infinite; 
+}
+
+/* Balloon Variations */
+.balloon-1 { left: 20%; animation-delay: 0s; background-color: #ff6f61; } 
+.balloon-2 { left: 50%; animation-delay: 2s; background-color: #f5a623; } 
+.balloon-3 { left: 80%; animation-delay: 4s; background-color: #ffcccb; }
+
+/* Balloon String */
+.balloon::after {     
+    content: '';     
+    position: absolute;     
+    bottom: -20px;     
+    left: 50%;     
+    transform: translateX(-50%);     
+    width: 2px;     
+    height: 20px;     
+    background: #fff; 
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {     
+    0% { opacity: 0; }     
+    100% { opacity: 1; } 
+}
+
+/* Media Query for Mobile Devices */
+@media (max-width: 768px) {     
+    .birthday-heading {         
+        font-size: 2rem;     
+    }     
+    .birthday-message {         
+        font-size: 1rem;     
+    }     
+    .flower, .balloon {         
+        width: 30px;         
+        height: 40px;     
+    } 
+}
+
+/* Hide the default audio controls */
+audio {     
+    display: none; 
+}
+
+/* Button Styles */
+#playButton {     
+    padding: 10px 20px;     
+    font-size: 1.2rem;     
+    background-color: #ff6f61;     
+    color: white;     
+    border: none;     
+    border-radius: 5px;     
+    cursor: pointer; 
+    border-radius:50px;
+    font-family:cursive;
+}
+
+#playButton:hover {     
+    background-color: #e55d50; 
+}

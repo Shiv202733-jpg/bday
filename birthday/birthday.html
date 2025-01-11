@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday!</title>
+    <link rel="stylesheet" href="birthday.css">
+</head>
+<body>
+    <div class="main-container">
+        <h1 class="birthday-heading">🎉 Happy Birthday Koyena! 🎉</h1>
+        <p class="birthday-message">Wishing you a day filled with love, laughter, and joy!</p>
+        
+        <!-- Encourage user interaction -->
+        <button id="playButton" onclick="document.getElementById('birthdayAudio').play()">Click to Start the Celebration!</button>
+
+        <!-- Party Popper -->
+        <div class="party-popper">
+            <div class="confetti confetti-1"></div>
+            <div class="confetti confetti-2"></div>
+            <div class="confetti confetti-3"></div>
+            <div class="confetti confetti-4"></div>
+            <div class="confetti confetti-5"></div>
+        </div>
+
+        <!-- Falling Flowers -->
+        <div class="falling-flowers">
+            <div class="flower flower-1"></div>
+            <div class="flower flower-2"></div>
+            <div class="flower flower-3"></div>
+            <div class="flower flower-4"></div>
+            <div class="flower flower-5"></div>
+        </div>
+
+        <!-- Floating Balloons -->
+        <div class="floating-balloons">
+            <div class="balloon balloon-1"></div>
+            <div class="balloon balloon-2"></div>
+            <div class="balloon balloon-3"></div>
+        </div>
+    </div>
+
+    <!-- Audio Element (hidden) -->
+    <audio id="birthdayAudio">
+        <source src="bday.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+</body>
+</html>
